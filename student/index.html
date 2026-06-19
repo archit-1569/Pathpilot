@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PathPilot AI helps students discover careers, build skills, and navigate their future."
+    />
+    <title>PathPilot AI | Navigate Your Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Auth state applied before first paint — cannot be cached separately -->
+    <script>
+      (function () {
+        var token = localStorage.getItem("pathpilot-token");
+        if (token) {
+          document.documentElement.classList.add("is-authed");
+          try {
+            var u = JSON.parse(localStorage.getItem("pathpilot-user") || "{}");
+            document.documentElement.dataset.userName =
+              u.name || u.email || "My account";
+            document.documentElement.dataset.userInitial = (
+              u.name ||
+              u.email ||
+              "U"
+            )
+              .charAt(0)
+              .toUpperCase();
+          } catch (e) {}
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="PathPilot AI home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path d="M7 25C11 24 13 21 14 17c1-4 3-7 8-9" />
+            <path d="m18 7 5 1-1 5" />
+            <circle cx="7" cy="25" r="2" />
+          </svg>
+        </span>
+        <span>PathPilot <strong>AI</strong></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="careers.html">Explore Careers</a>
+        <a href="skill-gap.html">Skill Gap</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="exams.html">Exam Guide</a>
+        <a href="resume.html">Resume</a>
+        <a href="mentor.html">AI Mentor</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" id="searchButton" aria-label="Open search">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="6" />
+            <path d="m16 16 4 4" />
+          </svg>
+        </button>
+        <button class="icon-button" id="themeButton" aria-label="Switch theme">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"
+            />
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z" />
+          </svg>
+        </button>
+
+        <!-- Shown when logged OUT -->
+        <a class="text-link auth-guest" href="login.html">Sign in</a>
+        <a class="button button-small auth-guest" href="register.html"
+          >Start exploring</a
+        >
+
+        <!-- Shown when logged IN -->
+        <a
+          class="header-user-chip auth-user"
+          href="profile.html"
+          id="headerUserChip"
+          aria-label="Go to profile"
+        >
+          <span class="header-user-avatar" id="headerUserAvatar">?</span>
+          <span id="headerUserName">My account</span>
+        </a>
+        <a class="button button-small auth-user" href="dashboard.html"
+          >Dashboard →</a
+        >
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#features">Explore</a>
+      <a href="#journey">How it works</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#stories">Stories</a>
+      <a href="register.html">Start exploring</a>
+    </nav>
+
+    <main>
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Your next chapter starts here</p>
+          <h1>Navigate your future with <em>intelligence.</em></h1>
+          <p class="hero-text">
+            Discover careers that fit who you are, understand the skills you
+            need, and follow a clear path from curious to career-ready.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="dashboard.html" id="heroCtaBtn"
+              >Find my path <span>→</span></a
+            >
+            <button class="play-button" id="demoButton">
+              <span>▶</span> See how it works
+            </button>
+          </div>
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>AN</span><span>SK</span><span>RM</span><span>+</span>
+            </div>
+            <p>
+              <strong>12,000+ students</strong><br />are building their future
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="compass-card">
+            <div class="compass-label">Your career compass</div>
+            <div class="compass">
+              <div class="compass-ring"></div>
+              <div class="needle"></div>
+              <span class="north">N</span><span class="east">E</span
+              ><span class="south">S</span><span class="west">W</span>
+              <div class="compass-center"></div>
+            </div>
+            <p>Finding your direction...</p>
+          </div>
+          <div class="floating-card match-card">
+            <div class="mini-icon purple">✦</div>
+            <div><span>Top career match</span><strong>AI Engineer</strong></div>
+            <b>94%</b>
+          </div>
+          <div class="floating-card skill-card">
+            <div class="mini-icon orange">↗</div>
+            <div>
+              <span>Next skill to learn</span><strong>Machine Learning</strong>
+            </div>
+          </div>
+          <span class="spark spark-one">✦</span>
+          <span class="spark spark-two">✦</span>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <p>Built to help you make confident decisions</p>
+        <div class="trust-items">
+          <span><b>25+</b> career pathways</span>
+          <span><b>100+</b> curated skills</span>
+          <span><b>50+</b> government exams</span>
+          <span><b>24/7</b> AI guidance</span>
+        </div>
+      </section>
+
+      <section class="feature-section section-shell" id="features">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> Everything you need</p>
+          <h2>One place to turn ambition into <em>action.</em></h2>
+          <p>
+            PathPilot brings career discovery, learning plans, and practical
+            guidance together in one thoughtful experience.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article
+            class="feature-card feature-large purple-card reveal"
+            onclick="window.location.href = 'careers.html'"
+            style="cursor: pointer"
+          >
+            <div class="feature-icon">✦</div>
+            <p class="card-kicker">Know your possibilities</p>
+            <h3>Career recommendations made for you</h3>
+            <p>
+              Get intelligent matches based on your education, interests,
+              strengths, and goals.
+            </p>
+            <div class="match-list">
+              <div><span>AI Engineer</span><b>94%</b></div>
+              <div><span>Data Scientist</span><b>88%</b></div>
+              <div><span>Product Manager</span><b>81%</b></div>
+            </div>
+          </article>
+          <article
+            class="feature-card reveal"
+            onclick="window.location.href = 'skill-gap.html'"
+            style="cursor: pointer"
+          >
+            <div class="feature-icon orange">⌁</div>
+            <p class="card-kicker">See what is missing</p>
+            <h3>Close your skill gaps</h3>
+            <p>
+              Compare where you are with where you want to go, then learn what
+              matters next.
+            </p>
+            <div class="skill-pills">
+              <span>Statistics</span><span>ML</span><span>Deep Learning</span>
+            </div>
+          </article>
+          <article
+            class="feature-card dark-card reveal"
+            onclick="window.location.href = 'roadmap.html'"
+            style="cursor: pointer"
+          >
+            <div class="feature-icon mint">↗</div>
+            <p class="card-kicker">Move with clarity</p>
+            <h3>Your personal roadmap</h3>
+            <p>
+              Follow a practical, staged plan from beginner foundations to
+              job-ready projects.
+            </p>
+            <div class="roadmap-mini">
+              <span class="done">✓</span><i></i><span class="active">2</span
+              ><i></i><span>3</span><i></i><span>4</span>
+            </div>
+          </article>
+          <article
+            class="feature-card mentor-card reveal"
+            onclick="window.location.href = 'mentor.html'"
+            style="cursor: pointer"
+          >
+            <div>
+              <div class="feature-icon blue">◎</div>
+              <p class="card-kicker">Never feel stuck</p>
+              <h3>Ask your AI career mentor</h3>
+              <p>
+                Get thoughtful answers about careers, exams, resumes, and what
+                to learn next.
+              </p>
+            </div>
+            <div class="chat-preview">
+              <p>What should I learn after Python?</p>
+              <p>
+                Based on your Data Science goal, start with statistics and SQL.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="journey-section" id="journey">
+        <div class="section-shell">
+          <div class="section-heading light reveal">
+            <p class="eyebrow"><span></span> A clearer way forward</p>
+            <h2>From “what if?” to <em>what’s next.</em></h2>
+          </div>
+          <div class="journey-grid">
+            <article class="journey-step reveal">
+              <b>01</b><span>Tell us about you</span>
+              <p>Share your education, interests, skills, and ambitions.</p>
+            </article>
+            <article class="journey-step reveal">
+              <b>02</b><span>Discover your fit</span>
+              <p>See career paths matched to your unique profile.</p>
+            </article>
+            <article class="journey-step reveal">
+              <b>03</b><span>Build your plan</span>
+              <p>Get a personalized sequence of skills and projects.</p>
+            </article>
+            <article class="journey-step reveal">
+              <b>04</b><span>Grow with guidance</span>
+              <p>Track progress and ask your AI mentor along the way.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-section section-shell" id="dashboard">
+        <div class="dashboard-copy reveal">
+          <p class="eyebrow"><span></span> Your journey, in focus</p>
+          <h2>A dashboard that keeps your future <em>moving.</em></h2>
+          <p>
+            See your recommendations, skill gaps, roadmap progress, and recent
+            activity at a glance.
+          </p>
+          <ul>
+            <li><span>✓</span> Career match insights</li>
+            <li><span>✓</span> Personalized learning progress</li>
+            <li><span>✓</span> Smart next-step suggestions</li>
+          </ul>
+          <a class="button" href="profile.html"
+            >Create my profile <span>→</span></a
+          >
+        </div>
+        <div class="dashboard-mock reveal">
+          <aside>
+            <div class="mini-brand">P</div>
+            <span class="active">⌂</span><span>✦</span><span>↗</span
+            ><span>▦</span><span>◎</span>
+          </aside>
+          <div class="dash-main">
+            <div class="dash-top">
+              <div>
+                <small>GOOD MORNING, ARJUN</small>
+                <h3>Ready for your next step?</h3>
+              </div>
+              <div class="profile-dot">A</div>
+            </div>
+            <div class="dash-cards">
+              <div class="dash-card match">
+                <small>TOP CAREER MATCH</small><strong>AI Engineer</strong>
+                <div class="progress"><i></i></div>
+                <span>94% match</span>
+              </div>
+              <div class="dash-card">
+                <small>ROADMAP PROGRESS</small><strong>42%</strong>
+                <div class="progress orange-progress"><i></i></div>
+                <span>7 of 16 tasks done</span>
+              </div>
+            </div>
+            <div class="dash-bottom">
+              <div class="dash-card">
+                <small>NEXT ON YOUR PATH</small>
+                <h4>Machine Learning Basics</h4>
+                <p>Continue your intermediate stage</p>
+                <button>Resume learning →</button>
+              </div>
+              <div class="dash-card">
+                <small>SKILLS TO BUILD</small>
+                <div class="bars">
+                  <span>Statistics<i style="--w: 75%"></i></span
+                  ><span>SQL<i style="--w: 62%"></i></span
+                  ><span>Deep Learning<i style="--w: 38%"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stories-section section-shell" id="stories">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> Real direction, real progress</p>
+          <h2>Students finding paths that feel <em>right.</em></h2>
+        </div>
+        <div class="story-grid">
+          <blockquote class="reveal">
+            <p>
+              “PathPilot helped me see that my love for problem solving could
+              become a real career. Now I have a plan, not just a dream.”
+            </p>
+            <footer>
+              <span>NS</span>
+              <div>
+                <strong>Neha Sharma</strong><small>Engineering student</small>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="featured reveal">
+            <p>
+              “The roadmap made learning Data Science feel possible. Every step
+              is clear, and I always know what to focus on next.”
+            </p>
+            <footer>
+              <span>RK</span>
+              <div>
+                <strong>Rahul Kumar</strong
+                ><small>Aspiring Data Scientist</small>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="reveal">
+            <p>
+              “I finally understood which government exams matched my degree and
+              interests. It saved me weeks of confusion.”
+            </p>
+            <footer>
+              <span>AP</span>
+              <div>
+                <strong>Ananya Patel</strong><small>B.Tech graduate</small>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="cta-section" id="cta">
+        <div class="cta-inner reveal">
+          <span class="cta-star">✦</span>
+          <p class="eyebrow"><span></span> Your future is waiting</p>
+          <h2>Ready to find your <em>direction?</em></h2>
+          <p>
+            Build your profile and get your first personalized career matches in
+            minutes.
+          </p>
+          <a class="button light-button" href="register.html"
+            >Start your journey <span>→</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top"
+        ><span class="brand-mark">↗</span
+        ><span>PathPilot <strong>AI</strong></span></a
+      >
+      <p>Navigate Your Future with Intelligence.</p>
+      <div>
+        <a href="#features">Features</a><a href="#journey">How it works</a
+        ><a href="#dashboard">Dashboard</a>
+      </div>
+      <small>© 2026 PathPilot AI. Built for brighter futures.</small>
+    </footer>
+
+    <div class="search-modal" id="searchModal" aria-hidden="true">
+      <div class="search-panel">
+        <button class="close-button" id="closeSearch" aria-label="Close search">
+          ×
+        </button>
+        <p class="eyebrow"><span></span> Explore PathPilot</p>
+        <label for="globalSearch">What are you looking for?</label>
+        <input
+          id="globalSearch"
+          type="search"
+          placeholder="Try “Data Scientist” or “UPSC”"
+        />
+        <div class="search-results" id="searchResults">
+          <button data-query="career">
+            <span>✦</span>
+            <div>
+              <strong>Explore career matches</strong
+              ><small>Discover work that fits your strengths</small>
+            </div>
+          </button>
+          <button data-query="skills">
+            <span>↗</span>
+            <div>
+              <strong>Analyze skill gaps</strong
+              ><small>See what to learn next</small>
+            </div>
+          </button>
+          <button data-query="exams">
+            <span>▦</span>
+            <div>
+              <strong>Browse government exams</strong
+              ><small>Find exams suited to your profile</small>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

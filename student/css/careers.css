@@ -1,0 +1,451 @@
+/* ── Careers Grid (careers.html) ── */
+.search-bar-container {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  display: flex;
+  gap: 12px;
+}
+.search-input {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 40px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 4px var(--purple-soft);
+}
+.custom-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+.careers-grid-section {
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.careers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+.career-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+.career-card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  border-color: var(--purple);
+}
+body.dark .career-card-link:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.career-card-link h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.career-card-link .c-desc {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--ink);
+  opacity: 0.8;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.career-card-link .c-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+/* ── Career Details (career-detail.html) ── */
+.back-link-container {
+  max-width: 1000px;
+  margin: 0 auto 24px;
+  padding: 0 24px;
+}
+.back-link {
+  display: inline-block;
+  color: var(--ink);
+  opacity: 0.6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+.back-link:hover {
+  opacity: 1;
+  color: var(--purple);
+}
+
+.career-header {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+.career-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: normal;
+  margin: 0 0 16px;
+  line-height: 1.1;
+}
+.career-overview {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink);
+  opacity: 0.8;
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+.career-quick-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.q-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--paper);
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  flex: 1;
+  min-width: 200px;
+}
+.q-icon {
+  font-size: 24px;
+}
+.q-stat small {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.q-stat strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.career-body-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .career-body-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail-section {
+  margin-bottom: 48px;
+}
+.detail-section h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+  letter-spacing: normal;
+  font-family: inherit;
+}
+.detail-list {
+  padding-left: 20px;
+  margin: 0;
+}
+.detail-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.roadmap-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+.roadmap-timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--line);
+}
+.roadmap-stage {
+  position: relative;
+  padding-left: 48px;
+}
+.roadmap-stage::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--purple);
+  border: 4px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--line);
+}
+.roadmap-stage h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+.roadmap-stage p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.career-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.detail-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+}
+.detail-card h3 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+.action-card {
+  background: var(--purple-soft);
+  border-color: var(--purple-soft);
+  text-align: center;
+}
+.action-card h3 {
+  color: var(--purple);
+  opacity: 1;
+}
+.action-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+
+/* ── Skill Gap (skill-gap.html) ── */
+.gap-results-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+.gap-stats-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+@media (max-width: 600px) {
+  .gap-stats-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.coverage-circle {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+.circular-chart {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 250px;
+}
+.circle-bg {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 3.8;
+}
+.circle {
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease-out;
+}
+.percentage {
+  fill: var(--ink);
+  stroke: none;
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 500;
+  text-anchor: middle;
+}
+.gap-stats-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: normal;
+  margin: 0 0 8px;
+}
+.gap-stats-info p {
+  font-size: 18px;
+  opacity: 0.8;
+  margin: 0;
+}
+.gap-stats-info strong {
+  color: var(--purple);
+}
+
+.gap-split-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .gap-split-view {
+    grid-template-columns: 1fr;
+  }
+}
+.gap-col h3 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+.gap-col .muted {
+  margin: 0 0 24px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.learning-sequence {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  counter-reset: seq;
+}
+.seq-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.seq-item::before {
+  counter-increment: seq;
+  content: counter(seq);
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--line);
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.importance-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.imp-box {
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+  background: var(--paper);
+}
+.imp-box h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.high-imp {
+  border-left-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+.high-imp h4 {
+  color: #ef4444;
+}
+.med-imp {
+  border-left-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.05);
+}
+.med-imp h4 {
+  color: #f59e0b;
+}
+.low-imp {
+  border-left-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+.low-imp h4 {
+  color: #3b82f6;
+}
+
+/* Utils */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 600;
+}
+.tag.done {
+  background: var(--purple-soft);
+  color: var(--purple);
+  border-color: transparent;
+}

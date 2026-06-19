@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Detailed career insights." />
+    <title>Career Details | PathPilot AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/careers.css" />
+    <script>
+      (function () {
+        var token = localStorage.getItem("pathpilot-token");
+        if (token) {
+          document.documentElement.classList.add("is-authed");
+          try {
+            var u = JSON.parse(localStorage.getItem("pathpilot-user") || "{}");
+            document.documentElement.dataset.userName =
+              u.name || u.email || "My account";
+            document.documentElement.dataset.userInitial = (
+              u.name ||
+              u.email ||
+              "U"
+            )
+              .charAt(0)
+              .toUpperCase();
+          } catch (e) {}
+        }
+      })();
+    </script>
+  </head>
+  <body class="page-body">
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 32 32">
+            <path d="M7 25C11 24 13 21 14 17c1-4 3-7 8-9" />
+            <path d="m18 7 5 1-1 5" />
+            <circle cx="7" cy="25" r="2" />
+          </svg>
+        </span>
+        <span>PathPilot <strong>AI</strong></span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="careers.html">Explore Careers</a>
+        <a href="skill-gap.html">Skill Gap</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="exams.html">Exam Guide</a>
+        <a href="resume.html">Resume</a>
+        <a href="mentor.html">AI Mentor</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" id="themeButton" aria-label="Switch theme">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"
+            />
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z" />
+          </svg>
+        </button>
+        <a class="text-link auth-guest" href="login.html">Sign in</a>
+        <a class="button button-small auth-guest" href="register.html"
+          >Get started</a
+        >
+        <a
+          class="header-user-chip auth-user"
+          href="profile.html"
+          id="headerUserChip"
+        >
+          <span class="header-user-avatar" id="headerUserAvatar">?</span>
+          <span id="headerUserName">My account</span>
+        </a>
+        <button class="menu-button" id="menuButton">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-main fade-in">
+      <div id="loadingIndicator" class="loading-state">
+        Loading career details...
+      </div>
+
+      <div id="careerContent" style="display: none">
+        <div class="back-link-container">
+          <a href="careers.html" class="back-link">← Back to Explore</a>
+        </div>
+
+        <section class="career-header">
+          <h1 id="cName">Career Name</h1>
+          <p id="cOverview" class="career-overview"></p>
+
+          <div class="career-quick-stats">
+            <div class="q-stat">
+              <span class="q-icon">💰</span>
+              <div>
+                <small>Estimated Salary</small>
+                <strong id="cSalary">—</strong>
+              </div>
+            </div>
+            <div class="q-stat">
+              <span class="q-icon">🎓</span>
+              <div>
+                <small>Eligibility</small>
+                <strong id="cEligibility">—</strong>
+              </div>
+            </div>
+            <div class="q-stat">
+              <span class="q-icon">📈</span>
+              <div>
+                <small>Career Growth</small>
+                <strong id="cGrowth">—</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="career-body-grid">
+          <div class="career-main-col">
+            <div class="detail-section">
+              <h2>Core Responsibilities</h2>
+              <ul id="cResponsibilities" class="detail-list"></ul>
+            </div>
+
+            <div class="detail-section">
+              <h2>Learning Roadmap</h2>
+              <div id="cRoadmap" class="roadmap-timeline"></div>
+            </div>
+          </div>
+
+          <div class="career-side-col">
+            <div class="detail-card">
+              <h3>Top Industries</h3>
+              <div id="cIndustries" class="tag-list"></div>
+            </div>
+
+            <div class="detail-card">
+              <h3>Required Skills</h3>
+              <div id="cSkills" class="tag-list"></div>
+            </div>
+
+            <div class="detail-card action-card">
+              <h3>Ready to dive in?</h3>
+              <p>See how your current skills match up against this career.</p>
+              <a href="#" id="cGapLink" class="button button-full"
+                >Run Skill Gap Analysis</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="errorState" class="no-results" style="display: none">
+        <h3>Career not found</h3>
+        <p>
+          The career you are looking for does not exist or an error occurred.
+        </p>
+        <a href="careers.html" class="button">Browse Careers</a>
+      </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/career-detail.js"></script>
+  </body>
+</html>

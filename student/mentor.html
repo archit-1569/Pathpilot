@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chat with your AI Career Mentor — get personalised career advice, skill gap analysis, and learning guidance."
+    />
+    <title>AI Mentor | PathPilot AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/chat.css" />
+  </head>
+  <body class="dash-body">
+    <!-- ── Sidebar ───────────────────────────────────────────────── -->
+    <nav class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <a class="sidebar-brand" href="index.html" aria-label="PathPilot AI home">
+        <span class="sidebar-logo">
+          <svg viewBox="0 0 32 32">
+            <path d="M7 25C11 24 13 21 14 17c1-4 3-7 8-9" />
+            <path d="m18 7 5 1-1 5" />
+            <circle cx="7" cy="25" r="2" />
+          </svg>
+        </span>
+        <span>PathPilot <strong>AI</strong></span>
+      </a>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">Menu</p>
+        <a class="sidebar-link" href="dashboard.html" id="nav-dashboard">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+          </svg>
+          Dashboard
+        </a>
+        <a class="sidebar-link" href="careers.html" id="nav-careers">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+          Explore Careers
+        </a>
+        <a class="sidebar-link" href="skill-gap.html" id="nav-gaps">
+          <svg viewBox="0 0 24 24">
+            <path d="M18 20V10" />
+            <path d="M12 20V4" />
+            <path d="M6 20v-6" />
+          </svg>
+          Skill Gap
+        </a>
+        <a class="sidebar-link" href="roadmap.html" id="nav-roadmap">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 12h18" />
+            <path d="M3 6h18" />
+            <path d="M3 18h18" />
+            <circle cx="9" cy="6" r="2" fill="currentColor" />
+            <circle cx="15" cy="12" r="2" fill="currentColor" />
+            <circle cx="9" cy="18" r="2" fill="currentColor" />
+          </svg>
+          My Roadmap
+        </a>
+        <a class="sidebar-link" href="exams.html" id="nav-exams">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 11l3 3L22 4" />
+            <path
+              d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+            />
+          </svg>
+          Exam Guide
+        </a>
+        <a class="sidebar-link" href="resume.html" id="nav-resume">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+            />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+          Resume Analyzer
+        </a>
+        <a class="sidebar-link active" href="mentor.html" id="nav-mentor">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+            />
+          </svg>
+          AI Mentor
+        </a>
+        <a class="sidebar-link" href="profile.html" id="nav-profile">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+          </svg>
+          My Profile
+        </a>
+      </div>
+
+      <div class="sidebar-section sidebar-bottom">
+        <button class="sidebar-link" id="themeToggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"
+            />
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z" />
+          </svg>
+          Toggle theme
+        </button>
+        <button class="sidebar-link danger" id="logoutBtn">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          Sign out
+        </button>
+      </div>
+    </nav>
+
+    <!-- ── Main content ──────────────────────────────────────────── -->
+    <div class="mentor-content">
+      <!-- Top bar -->
+      <header class="mentor-topbar">
+        <button
+          class="sidebar-toggle"
+          id="sidebarToggle"
+          aria-label="Toggle sidebar"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="mentor-topbar-left">
+          <div class="mentor-topbar-icon">🧭</div>
+          <div>
+            <h1>AI Career Mentor</h1>
+            <p>Personalised guidance powered by your profile</p>
+          </div>
+        </div>
+        <div class="mentor-topbar-right">
+          <button
+            class="new-chat-btn"
+            id="newChatBtn"
+            title="Start a fresh conversation"
+          >
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+            New Chat
+          </button>
+          <a
+            class="dash-user-chip"
+            id="userChip"
+            href="profile.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <span class="user-avatar" id="userAvatar">?</span>
+            <span id="userGreeting">Loading…</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Chat window -->
+      <div class="chat-body" id="chatBody">
+        <div class="chat-inner" id="chatInner">
+          <!-- Welcome screen (shown when chat is empty) -->
+          <div class="chat-welcome" id="chatWelcome">
+            <div class="chat-welcome-avatar">🧭</div>
+            <h2>Your AI Career Mentor</h2>
+            <p>
+              Ask me anything about your career path — I know your profile, your
+              skill gaps, and the best learning routes for your goals.
+            </p>
+            <div class="suggested-chips" id="suggestedChips">
+              <button class="chip-btn" data-msg="What career suits me best?">
+                🎯 Best career for me
+              </button>
+              <button
+                class="chip-btn"
+                data-msg="What skills am I missing for my top career?"
+              >
+                📊 My skill gaps
+              </button>
+              <button class="chip-btn" data-msg="Show me my learning roadmap">
+                🗺️ My roadmap
+              </button>
+              <button
+                class="chip-btn"
+                data-msg="What government exams should I consider?"
+              >
+                📝 Exam guidance
+              </button>
+              <button class="chip-btn" data-msg="How can I improve my profile?">
+                ✨ Profile tips
+              </button>
+              <button
+                class="chip-btn"
+                data-msg="Tell me about Data Scientist / ML Engineer"
+              >
+                🎓 Career details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input area -->
+      <div class="chat-input-area">
+        <div class="chat-input-inner">
+          <textarea
+            class="chat-textarea"
+            id="chatInput"
+            placeholder="Ask me about careers, skills, exams, roadmaps…"
+            rows="1"
+            aria-label="Chat message input"
+          ></textarea>
+          <button
+            class="send-btn"
+            id="sendBtn"
+            aria-label="Send message"
+            disabled
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </div>
+        <p class="chat-hint">Enter to send · Shift+Enter for new line</p>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/mentor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+[
+  {
+    "exam_name": "UPSC CSE",
+    "category": "Civil Services",
+    "eligibility": "Graduate",
+    "age_limit": "21–32 Years",
+    "selection_process": ["Prelims", "Mains", "Interview"],
+    "syllabus": "History, Geography, Polity, Economy, Science, Current Affairs",
+    "salary_range": "₹56,100–2,50,000/month",
+    "job_roles": ["IAS", "IPS", "IFS"],
+    "difficulty_level": "Very High"
+  },
+  {
+    "exam_name": "SSC CGL",
+    "category": "SSC",
+    "eligibility": "Graduate",
+    "age_limit": "18–32 Years",
+    "selection_process": ["Tier 1 CBT", "Tier 2 CBT", "Document Verification"],
+    "syllabus": "Reasoning, Quant, English, GK, Computer Knowledge",
+    "salary_range": "₹25,500–1,51,100/month",
+    "job_roles": ["Income Tax Inspector", "CBI Inspector", "Auditor"],
+    "difficulty_level": "High"
+  },
+  {
+    "exam_name": "SSC CHSL",
+    "category": "SSC",
+    "eligibility": "12th Pass",
+    "age_limit": "18–27 Years",
+    "selection_process": ["Tier 1 CBT", "Tier 2 CBT"],
+    "syllabus": "English, Reasoning, Quant, GK",
+    "salary_range": "₹19,900–81,100/month",
+    "job_roles": ["LDC", "DEO", "Postal Assistant"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "exam_name": "IBPS PO",
+    "category": "Banking",
+    "eligibility": "Graduate",
+    "age_limit": "20–30 Years",
+    "selection_process": ["Prelims", "Mains", "Interview"],
+    "syllabus": "Quant, Reasoning, English, Banking Awareness",
+    "salary_range": "₹52,000–55,000/month",
+    "job_roles": ["Probationary Officer"],
+    "difficulty_level": "High"
+  },
+  {
+    "exam_name": "SBI PO",
+    "category": "Banking",
+    "eligibility": "Graduate",
+    "age_limit": "21–30 Years",
+    "selection_process": ["Prelims", "Mains", "Interview"],
+    "syllabus": "Quant, Reasoning, English, Banking Awareness",
+    "salary_range": "₹60,000+/month",
+    "job_roles": ["Probationary Officer"],
+    "difficulty_level": "High"
+  },
+  {
+    "exam_name": "RBI Grade B",
+    "category": "Banking",
+    "eligibility": "Graduate (60%+)",
+    "age_limit": "21–30 Years",
+    "selection_process": ["Phase 1", "Phase 2", "Interview"],
+    "syllabus": "Economics, Finance, Management, General Awareness",
+    "salary_range": "₹1 Lakh+/month",
+    "job_roles": ["RBI Officer"],
+    "difficulty_level": "Very High"
+  },
+  {
+    "exam_name": "GATE",
+    "category": "Engineering",
+    "eligibility": "Graduate / Final Year",
+    "age_limit": "No Upper Limit",
+    "selection_process": ["Single Exam"],
+    "syllabus": "Branch-specific Engineering Subjects",
+    "salary_range": "Depends on PSU / M.Tech",
+    "job_roles": ["PSU Engineer", "Researcher"],
+    "difficulty_level": "High"
+  },
+  {
+    "exam_name": "ISRO Scientist",
+    "category": "Engineering",
+    "eligibility": "B.E. / B.Tech",
+    "age_limit": "Under 35 Years",
+    "selection_process": ["Written Test", "Interview"],
+    "syllabus": "Branch-specific Technical Subjects",
+    "salary_range": "₹56,100+/month",
+    "job_roles": ["Scientist / Engineer"],
+    "difficulty_level": "Very High"
+  },
+  {
+    "exam_name": "DRDO Scientist B",
+    "category": "Engineering",
+    "eligibility": "B.E. / B.Tech + GATE",
+    "age_limit": "Under 35 Years",
+    "selection_process": ["GATE Score", "Interview"],
+    "syllabus": "Engineering Subjects via GATE",
+    "salary_range": "₹56,100+/month",
+    "job_roles": ["Scientist B"],
+    "difficulty_level": "Very High"
+  },
+  {
+    "exam_name": "CDS",
+    "category": "Defence",
+    "eligibility": "Graduate",
+    "age_limit": "19–25 Years",
+    "selection_process": ["Written Exam", "SSB Interview", "Medical"],
+    "syllabus": "English, GK, Mathematics",
+    "salary_range": "₹56,100+/month",
+    "job_roles": ["Army Officer", "Navy Officer", "Air Force Officer"],
+    "difficulty_level": "High"
+  },
+  {
+    "exam_name": "AFCAT",
+    "category": "Defence",
+    "eligibility": "Graduate",
+    "age_limit": "20–24 Years",
+    "selection_process": ["AFCAT Written", "AFSB Interview", "Medical"],
+    "syllabus": "General Awareness, Reasoning, English",
+    "salary_range": "₹56,100+/month",
+    "job_roles": ["Air Force Officer"],
+    "difficulty_level": "High"
+  },
+  {
+    "exam_name": "NDA",
+    "category": "Defence",
+    "eligibility": "12th Pass",
+    "age_limit": "16.5–19.5 Years",
+    "selection_process": ["Written Exam", "SSB Interview", "Medical"],
+    "syllabus": "Mathematics, General Ability Test",
+    "salary_range": "₹56,100+/month",
+    "job_roles": ["Army Officer", "Navy Officer", "Air Force Officer"],
+    "difficulty_level": "High"
+  },
+  {
+    "exam_name": "Railway NTPC",
+    "category": "Railways",
+    "eligibility": "Graduate / 12th Pass",
+    "age_limit": "18–33 Years",
+    "selection_process": ["CBT 1", "CBT 2", "Skill Test"],
+    "syllabus": "Reasoning, GK, Quantitative Aptitude",
+    "salary_range": "₹25,500–81,100/month",
+    "job_roles": ["Station Master", "Clerk", "Goods Guard"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "exam_name": "RRB Group D",
+    "category": "Railways",
+    "eligibility": "10th Pass / ITI",
+    "age_limit": "18–33 Years",
+    "selection_process": ["CBT", "PET", "Medical"],
+    "syllabus": "Reasoning, Mathematics, Science, GK",
+    "salary_range": "₹18,000+/month",
+    "job_roles": ["Track Maintainer", "Helper", "Porter"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "exam_name": "CTET",
+    "category": "Teaching",
+    "eligibility": "D.El.Ed / B.Ed",
+    "age_limit": "No Upper Limit",
+    "selection_process": ["Single Exam"],
+    "syllabus": "Child Development, Pedagogy, Subject-specific Papers",
+    "salary_range": "Qualification Exam",
+    "job_roles": ["Teacher Eligibility Certificate"],
+    "difficulty_level": "Medium"
+  },
+  {
+    "exam_name": "UGC NET",
+    "category": "Teaching",
+    "eligibility": "Master's Degree",
+    "age_limit": "No Upper Limit",
+    "selection_process": ["Computer-based Test"],
+    "syllabus": "Subject Paper + Research Aptitude",
+    "salary_range": "Assistant Professor Salary",
+    "job_roles": ["Lecturer", "Assistant Professor", "JRF Researcher"],
+    "difficulty_level": "High"
+  },
+  {
+    "exam_name": "State PSC",
+    "category": "Civil Services",
+    "eligibility": "Graduate",
+    "age_limit": "State-wise (typically 21–40)",
+    "selection_process": ["Prelims", "Mains", "Interview"],
+    "syllabus": "Similar to UPSC — History, Polity, Economy, State GK",
+    "salary_range": "₹50,000–1,50,000/month",
+    "job_roles": ["SDM", "DSP", "BDO", "Tehsildar"],
+    "difficulty_level": "High"
+  }
+]

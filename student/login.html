@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sign in | PathPilot AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/auth.css?v=1.0.1" />
+  </head>
+  <body>
+    <main class="auth-layout">
+      <aside class="auth-brand">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">P</span><span>PathPilot <b>AI</b></span></a
+        >
+        <div class="brand-message">
+          <p>Welcome back</p>
+          <h1>Your future is still <em>moving.</em></h1>
+          <p>
+            Pick up where you left off and keep building the career that fits
+            you.
+          </p>
+        </div>
+        <small>Navigate Your Future with Intelligence.</small>
+        <div class="orbit"></div>
+      </aside>
+      <section class="auth-main">
+        <div class="auth-card">
+          <h2>Sign in</h2>
+          <p>New to PathPilot? <a href="register.html">Create an account</a></p>
+          <form id="loginForm">
+            <div class="form-grid">
+              <div class="field full">
+                <label for="email">Email address</label
+                ><input id="email" type="email" required autocomplete="email" />
+              </div>
+              <div class="field full">
+                <label for="password">Password</label
+                ><input
+                  id="password"
+                  type="password"
+                  required
+                  autocomplete="current-password"
+                />
+              </div>
+            </div>
+            <div class="form-actions">
+              <span></span><a href="forgot-password.html">Forgot password?</a>
+            </div>
+            <button class="primary-button" type="submit">
+              Sign in to PathPilot
+            </button>
+            <div class="message" id="message"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="js/api.js?v=1.0.1"></script>
+    <script src="js/auth.js?v=1.0.1"></script>
+  </body>
+</html>

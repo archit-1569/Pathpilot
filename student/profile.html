@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your profile | PathPilot AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+
+<body class="profile-layout">
+  <header class="profile-header">
+    <a class="brand" href="index.html"><span class="brand-mark">P</span><span>PathPilot <b>AI</b></span></a>
+    <nav>
+      <a class="text-button" href="index.html">Home</a><button class="text-button" id="logoutButton">Sign out</button>
+    </nav>
+  </header>
+  <main class="profile-main">
+    <div class="profile-intro">
+      <div>
+        <h1>Your student profile</h1>
+        <p>
+          Give PathPilot the context it needs to personalize your journey.
+        </p>
+      </div>
+      <div class="profile-progress">
+        <span id="progressLabel">Profile completion</span><i id="progressBar"></i>
+      </div>
+    </div>
+    <form class="profile-card" id="profileForm">
+      <h2>About you</h2>
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">Full name</label><input id="name" required />
+        </div>
+        <div class="field">
+          <label for="age">Age</label><input id="age" type="number" min="13" max="100" />
+        </div>
+        <div class="field">
+          <label for="gender">Gender</label><select id="gender">
+            <option value="">Select</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Non-binary</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="educationLevel">Education level</label><input id="educationLevel"
+            placeholder="e.g. Undergraduate" />
+        </div>
+        <div class="field">
+          <label for="stream">Stream</label><input id="stream" placeholder="e.g. Computer Science" />
+        </div>
+        <div class="field">
+          <label for="cgpa">CGPA</label><input id="cgpa" type="number" min="0" max="10" step=".01" />
+        </div>
+      </div>
+      <h2>Skills and direction</h2>
+      <div class="form-grid">
+        <div class="field full">
+          <label for="skills">Skills</label><input id="skills" placeholder="e.g. Python, SQL, Communication" />
+        </div>
+        <div class="field full">
+          <label for="interests">Interests</label><input id="interests"
+            placeholder="e.g. Artificial Intelligence, Design, Finance" />
+        </div>
+        <div class="field full">
+          <label for="certifications">Certifications</label><input id="certifications"
+            placeholder="e.g. AWS Cloud Practitioner, Google Data Analytics" />
+        </div>
+        <div class="field full">
+          <label for="careerGoals">Career goals</label><textarea id="careerGoals"
+            placeholder="e.g Tell us where you would like your career to go..."></textarea>
+        </div>
+      </div>
+      <div class="message" id="message"></div>
+      <div class="profile-footer">
+        <button class="danger-button" type="button" id="deleteButton">
+          Delete account</button><button class="primary-button" type="submit">Save profile</button>
+      </div>
+    </form>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+
+</html>

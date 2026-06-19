@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore government and competitive exams in India – UPSC, SSC, Banking, Defence, and more."
+    />
+    <title>Exam Guide | PathPilot AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/careers.css" />
+    <link rel="stylesheet" href="css/exams.css" />
+    <script>
+      (function () {
+        var token = localStorage.getItem("pathpilot-token");
+        if (token) {
+          document.documentElement.classList.add("is-authed");
+          try {
+            var u = JSON.parse(localStorage.getItem("pathpilot-user") || "{}");
+            document.documentElement.dataset.userName =
+              u.name || u.email || "My account";
+            document.documentElement.dataset.userInitial = (
+              u.name ||
+              u.email ||
+              "U"
+            )
+              .charAt(0)
+              .toUpperCase();
+          } catch (e) {}
+        }
+      })();
+    </script>
+  </head>
+  <body class="page-body">
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 32 32">
+            <path d="M7 25C11 24 13 21 14 17c1-4 3-7 8-9" />
+            <path d="m18 7 5 1-1 5" />
+            <circle cx="7" cy="25" r="2" />
+          </svg>
+        </span>
+        <span>PathPilot <strong>AI</strong></span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="careers.html">Explore Careers</a>
+        <a href="skill-gap.html">Skill Gap</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="exams.html" class="active">Exam Guide</a>
+        <a href="resume.html">Resume</a>
+        <a href="mentor.html">AI Mentor</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" id="themeButton" aria-label="Switch theme">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"
+            />
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z" />
+          </svg>
+        </button>
+        <a class="text-link auth-guest" href="login.html">Sign in</a>
+        <a class="button button-small auth-guest" href="register.html"
+          >Get started</a
+        >
+        <a
+          class="header-user-chip auth-user"
+          href="profile.html"
+          id="headerUserChip"
+        >
+          <span class="header-user-avatar" id="headerUserAvatar">?</span>
+          <span id="headerUserName">My account</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="page-main fade-in">
+      <section class="page-hero">
+        <p class="eyebrow"><span></span> Your next step</p>
+        <h1>Government Exam Guide</h1>
+        <p class="hero-sub">
+          Browse <span id="examCount">17</span> top competitive exams — UPSC,
+          SSC, Banking, Defence, Railways & more. Discover eligibility, process,
+          salary and key roles.
+        </p>
+
+        <div class="search-bar-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search exams or job roles..."
+            class="search-input"
+            id="examSearch"
+          />
+        </div>
+
+        <div class="filter-chips" id="filterChips">
+          <button class="chip active" data-category="">All</button>
+          <button class="chip" data-category="Civil Services">
+            Civil Services
+          </button>
+          <button class="chip" data-category="Banking">Banking</button>
+          <button class="chip" data-category="SSC">SSC</button>
+          <button class="chip" data-category="Engineering">Engineering</button>
+          <button class="chip" data-category="Defence">Defence</button>
+          <button class="chip" data-category="Railways">Railways</button>
+          <button class="chip" data-category="Teaching">Teaching</button>
+        </div>
+      </section>
+
+      <section class="exams-grid-section">
+        <div id="loadingIndicator" class="loading-state">Loading exams...</div>
+        <div id="examsGrid" class="exams-grid" style="display: none"></div>
+        <div id="noResults" class="no-results" style="display: none">
+          <h3>No exams found</h3>
+          <p>Try adjusting your search or filter.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/exams.js"></script>
+  </body>
+</html>

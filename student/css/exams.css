@@ -1,0 +1,492 @@
+/* ── Exam Explorer ─────────────────────────────────────────────── */
+
+/* Category filter chips */
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 auto 40px;
+  max-width: 700px;
+}
+.chip {
+  padding: 8px 18px;
+  border-radius: 40px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.chip:hover {
+  border-color: var(--purple);
+  color: var(--purple);
+  background: var(--purple-soft);
+}
+.chip.active {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+body.dark .chip.active {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+/* Exams grid */
+.exams-grid-section {
+  padding: 0 24px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.exam-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.exam-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+  border-color: var(--purple);
+}
+body.dark .exam-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.exam-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.exam-card h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 800;
+}
+.cat-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cat-Civil.Services {
+  background: rgba(139, 92, 246, 0.12);
+  color: #7c3aed;
+}
+.cat-Banking {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+.cat-Engineering {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+}
+.cat-Defence {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+.cat-Railways {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+.cat-Teaching {
+  background: rgba(236, 72, 153, 0.12);
+  color: #db2777;
+}
+.cat-SSC {
+  background: rgba(20, 184, 166, 0.12);
+  color: #0d9488;
+}
+/* Generic fallback */
+.cat-badge:not([class*="cat-"]) {
+  background: var(--purple-soft);
+  color: var(--purple);
+}
+
+.exam-eligibility {
+  font-size: 13px;
+  opacity: 0.7;
+  margin: 0 0 16px;
+}
+.exam-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.diff-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.diff-Very.High {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+.diff-High {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+.diff-Medium {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+.diff-badge:not([class*="diff-"]) {
+  background: var(--line);
+  color: var(--ink);
+}
+.exam-arrow {
+  font-size: 18px;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+.exam-card:hover .exam-arrow {
+  opacity: 1;
+  color: var(--purple);
+}
+
+/* ── Exam Detail ─────────────────────────────────────────────── */
+.exam-header {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+.exam-header h1 {
+  margin: 0 0 12px;
+  letter-spacing: normal;
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+}
+.exam-meta-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.exam-meta-badges .cat-badge,
+.exam-meta-badges .diff-badge {
+  font-size: 13px;
+  padding: 6px 14px;
+}
+
+.exam-quick-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.exam-stat {
+  flex: 1;
+  min-width: 180px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+.exam-stat small {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.exam-stat strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.exam-body-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .exam-body-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exam-section h2 {
+  font-size: 22px;
+  letter-spacing: normal;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Selection process steps */
+.selection-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+.selection-steps::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--line);
+}
+.step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  position: relative;
+}
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.step-label {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Syllabus tags */
+.syllabus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.syllabus-tag {
+  padding: 6px 14px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+body.dark .syllabus-tag {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.exam-side-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.exam-side-card h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  margin: 0 0 16px;
+}
+.job-roles-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.job-roles-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+  font-size: 14px;
+}
+.job-roles-list li:last-child {
+  border-bottom: 0;
+}
+.job-roles-list li::before {
+  content: "→ ";
+  color: var(--purple);
+}
+
+/* ── Roadmap Page ─────────────────────────────────────────────── */
+.roadmap-hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin: 0 auto 40px;
+  max-width: 900px;
+}
+@media (max-width: 600px) {
+  .roadmap-hero-stat {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.roadmap-ring {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+.roadmap-ring .circular-chart {
+  display: block;
+  max-width: 100%;
+}
+.roadmap-ring .circle-bg {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 4;
+}
+.roadmap-ring .circle {
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease-out;
+}
+.roadmap-ring .percentage {
+  fill: var(--ink);
+  stroke: none;
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 500;
+  text-anchor: middle;
+}
+
+.roadmap-stat-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: normal;
+  margin: 0 0 6px;
+}
+.roadmap-stat-info p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.8;
+}
+.roadmap-stat-info strong {
+  color: var(--purple);
+}
+
+.roadmap-timeline-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+.roadmap-stage-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  background: var(--paper);
+  position: relative;
+  transition: border-color 0.2s;
+}
+.roadmap-stage-card.completed {
+  border-color: #10b981;
+}
+.roadmap-stage-card.completed::after {
+  content: "✓ Done";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.stage-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.stage-num {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.roadmap-stage-card.completed .stage-num {
+  background: #10b981;
+}
+.stage-title h3 {
+  margin: 0 0 2px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.stage-title p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.stage-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.skill-chip.acquired {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.skill-chip.pending {
+  background: var(--purple-soft);
+  color: var(--purple);
+  border-color: rgba(128, 103, 216, 0.25);
+}
+.skill-chip .skill-icon {
+  font-size: 14px;
+}

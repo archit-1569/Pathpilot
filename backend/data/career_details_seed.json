@@ -1,0 +1,306 @@
+{
+  "Software Developer": {
+    "overview": "Software developers design, build, and maintain applications and operating systems. They work across various domains, translating requirements into scalable, robust code.",
+    "eligibility": "Bachelor's degree in Computer Science, Software Engineering, or related field. Bootcamps or strong portfolios are often accepted.",
+    "salary_range": "$70,000 - $160,000+",
+    "responsibilities": [
+      "Write clean, maintainable, and efficient code",
+      "Collaborate with cross-functional teams to define and ship new features",
+      "Identify and correct bottlenecks and fix bugs",
+      "Participate in code reviews and architectural decisions"
+    ],
+    "career_growth": "Junior Developer → Mid-Level Developer → Senior Developer → Lead Developer / Engineering Manager",
+    "industries": ["Information Technology", "Finance", "Healthcare", "E-commerce"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Fundamentals", "skills": ["Python", "Java", "C++", "Git", "Basic Data Structures"]},
+      {"stage": "Intermediate", "title": "Backend & DBs", "skills": ["SQL", "REST APIs", "Node.js", "Django"]},
+      {"stage": "Advanced", "title": "System Design", "skills": ["Microservices", "Docker", "System Architecture"]},
+      {"stage": "Job Ready", "title": "Production", "skills": ["CI/CD", "AWS", "Performance Tuning"]}
+    ]
+  },
+  "Data Scientist / ML Engineer": {
+    "overview": "Data Scientists and ML Engineers build predictive models and derive actionable insights from massive datasets. They sit at the intersection of statistics, programming, and domain expertise.",
+    "eligibility": "Master's or Ph.D. in Data Science, Computer Science, Statistics, or a quantitative field. Strong mathematical foundation required.",
+    "salary_range": "$95,000 - $180,000+",
+    "responsibilities": [
+      "Develop machine learning models for predictive analytics",
+      "Process, clean, and verify the integrity of data used for analysis",
+      "Perform ad-hoc analysis and present results in a clear manner",
+      "Deploy models to production environments"
+    ],
+    "career_growth": "Junior Data Scientist → Data Scientist → Senior ML Engineer → Principal Data Scientist",
+    "industries": ["Tech", "Finance", "Healthcare", "Retail", "Automotive"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Math & Programming", "skills": ["Python", "Statistics", "Linear Algebra", "Pandas"]},
+      {"stage": "Intermediate", "title": "Machine Learning", "skills": ["Scikit-Learn", "XGBoost", "Feature Engineering"]},
+      {"stage": "Advanced", "title": "Deep Learning", "skills": ["PyTorch", "TensorFlow", "Neural Networks"]},
+      {"stage": "Job Ready", "title": "MLOps", "skills": ["Docker", "MLflow", "Model Deployment"]}
+    ]
+  },
+  "Data Analyst": {
+    "overview": "Data Analysts collect, process, and perform statistical analyses on data. Their insights help companies make better business decisions.",
+    "eligibility": "Bachelor's degree in Mathematics, Economics, Computer Science, Information Management or Statistics.",
+    "salary_range": "$60,000 - $110,000+",
+    "responsibilities": [
+      "Interpret data and analyze results using statistical techniques",
+      "Develop and implement data analyses, data collection systems",
+      "Acquire data from primary or secondary data sources",
+      "Create dashboards and data visualizations"
+    ],
+    "career_growth": "Junior Data Analyst → Data Analyst → Senior Data Analyst → Analytics Manager",
+    "industries": ["Finance", "E-commerce", "Marketing", "Consulting"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Spreadsheets & Queries", "skills": ["Excel", "SQL Fundamentals", "Basic Statistics"]},
+      {"stage": "Intermediate", "title": "Data Manipulation", "skills": ["Advanced SQL", "Python", "Pandas"]},
+      {"stage": "Advanced", "title": "Visualization", "skills": ["Tableau", "Power BI", "Data Storytelling"]},
+      {"stage": "Job Ready", "title": "Business Intelligence", "skills": ["A/B Testing", "ETL concepts", "Dashboarding"]}
+    ]
+  },
+  "Data Engineer": {
+    "overview": "Data Engineers design, build, and optimize the data architecture, pipelines, and infrastructure that allow analysts and data scientists to do their jobs effectively.",
+    "eligibility": "Bachelor's degree in Computer Science, IT, or related fields with strong software engineering fundamentals.",
+    "salary_range": "$90,000 - $160,000+",
+    "responsibilities": [
+      "Create and maintain optimal data pipeline architecture",
+      "Assemble large, complex data sets that meet business requirements",
+      "Build the infrastructure required for optimal extraction, transformation, and loading of data",
+      "Build analytics tools that utilize the data pipeline"
+    ],
+    "career_growth": "Junior Data Engineer → Data Engineer → Senior Data Engineer → Data Architect",
+    "industries": ["Tech", "Finance", "Healthcare", "Media"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Databases & Code", "skills": ["SQL", "Python", "Linux"]},
+      {"stage": "Intermediate", "title": "Data Modeling", "skills": ["Data Warehousing", "NoSQL", "PostgreSQL"]},
+      {"stage": "Advanced", "title": "Big Data & Pipelines", "skills": ["Apache Spark", "Airflow", "Kafka"]},
+      {"stage": "Job Ready", "title": "Cloud Data", "skills": ["AWS Redshift", "Snowflake", "Databricks"]}
+    ]
+  },
+  "Web / UI Developer": {
+    "overview": "Web and UI Developers specialize in creating the visual elements of a website or application. They ensure interfaces are responsive, accessible, and performant.",
+    "eligibility": "Bachelor's degree in Computer Science or Design, or equivalent bootcamp/self-taught experience with a strong portfolio.",
+    "salary_range": "$65,000 - $140,000+",
+    "responsibilities": [
+      "Translate UI/UX design wireframes to actual code",
+      "Optimize applications for maximum speed and scalability",
+      "Ensure the technical feasibility of UI/UX designs",
+      "Build reusable code and libraries for future use"
+    ],
+    "career_growth": "Junior Frontend Developer → Frontend Developer → Senior UI Developer → Frontend Architect",
+    "industries": ["Software", "Agency", "E-commerce", "Media"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Web Fundamentals", "skills": ["HTML", "CSS", "JavaScript"]},
+      {"stage": "Intermediate", "title": "Frameworks", "skills": ["React", "Vue.js", "Tailwind CSS"]},
+      {"stage": "Advanced", "title": "State & Performance", "skills": ["Redux", "Next.js", "Web Performance"]},
+      {"stage": "Job Ready", "title": "Modern Tooling", "skills": ["TypeScript", "Jest", "Webpack"]}
+    ]
+  },
+  "DevOps / Cloud Engineer": {
+    "overview": "DevOps Engineers bridge the gap between development and operations. They automate infrastructure, manage CI/CD pipelines, and ensure high availability in the cloud.",
+    "eligibility": "Degree in Computer Science or IT. Certifications (AWS, Azure, Kubernetes) are highly valued.",
+    "salary_range": "$95,000 - $170,000+",
+    "responsibilities": [
+      "Implement integrations requested by customers",
+      "Deploy updates and fixes",
+      "Build tools to reduce occurrences of errors and improve customer experience",
+      "Develop software to integrate with internal back-end systems"
+    ],
+    "career_growth": "Junior DevOps → DevOps Engineer → Senior Cloud Engineer → Site Reliability Engineer (SRE)",
+    "industries": ["Cloud Computing", "SaaS", "Finance", "Enterprise Tech"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "OS & Networking", "skills": ["Linux", "Bash Scripting", "Networking Basics"]},
+      {"stage": "Intermediate", "title": "Containers & Cloud", "skills": ["Docker", "AWS/Azure", "Git"]},
+      {"stage": "Advanced", "title": "Infrastructure as Code", "skills": ["Terraform", "Ansible", "Kubernetes"]},
+      {"stage": "Job Ready", "title": "CI/CD & Monitoring", "skills": ["Jenkins/GitHub Actions", "Prometheus", "Grafana"]}
+    ]
+  },
+  "Education & Teaching": {
+    "overview": "Educators instruct and mentor students at various levels, from primary schools to universities and corporate training environments.",
+    "eligibility": "Bachelor's degree in Education or subject specialty. Teaching certification or B.Ed/M.Ed required for schools.",
+    "salary_range": "$40,000 - $90,000+",
+    "responsibilities": [
+      "Plan and deliver engaging lessons",
+      "Assess and monitor student progress",
+      "Adapt teaching methods to meet diverse student needs",
+      "Communicate with parents or stakeholders regarding student development"
+    ],
+    "career_growth": "Teacher → Senior Teacher → Department Head → Principal / Academic Director",
+    "industries": ["Public Education", "Higher Education", "EdTech", "Corporate Training"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Subject Mastery", "skills": ["Subject Knowledge", "Communication", "Patience"]},
+      {"stage": "Intermediate", "title": "Pedagogy", "skills": ["Lesson Planning", "Classroom Management", "Assessment Design"]},
+      {"stage": "Advanced", "title": "Specialized Needs", "skills": ["Inclusive Education", "Educational Psychology"]},
+      {"stage": "Job Ready", "title": "Modern Tools", "skills": ["EdTech Tools", "Curriculum Development", "Mentoring"]}
+    ]
+  },
+  "Finance & Accounting": {
+    "overview": "Finance professionals manage budgets, audit financial records, and analyze market trends to ensure the financial health of an organization.",
+    "eligibility": "Degree in Finance, Accounting, or Economics. Professional certifications like CPA, CFA, or CA are crucial.",
+    "salary_range": "$60,000 - $150,000+",
+    "responsibilities": [
+      "Prepare and analyze financial statements",
+      "Ensure compliance with tax regulations",
+      "Develop financial forecasting and risk analysis models",
+      "Provide strategic advice to management"
+    ],
+    "career_growth": "Junior Accountant/Analyst → Senior Analyst → Finance Manager → CFO",
+    "industries": ["Banking", "Corporate Finance", "Investment Firms", "Public Accounting"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Basics", "skills": ["Accounting Principles", "Excel", "Financial Math"]},
+      {"stage": "Intermediate", "title": "Analysis & Tax", "skills": ["Financial Modeling", "Taxation", "Auditing"]},
+      {"stage": "Advanced", "title": "Strategy", "skills": ["Corporate Finance", "Risk Management", "Valuation"]},
+      {"stage": "Job Ready", "title": "Certification", "skills": ["CPA/CFA Prep", "ERP Systems", "Compliance"]}
+    ]
+  },
+  "Sales & Marketing": {
+    "overview": "Sales and Marketing professionals drive revenue and brand awareness. They analyze consumer behavior, create campaigns, and close deals.",
+    "eligibility": "Degree in Business, Marketing, or Communications. Practical experience and strong soft skills often outweigh formal degrees.",
+    "salary_range": "$50,000 - $130,000+ (often includes high commission structures)",
+    "responsibilities": [
+      "Develop and execute marketing campaigns",
+      "Analyze market trends and competitor strategies",
+      "Build and maintain client relationships",
+      "Negotiate contracts and close sales"
+    ],
+    "career_growth": "Sales Representative / Marketing Assistant → Marketing Executive → Sales Manager → VP of Marketing/Sales",
+    "industries": ["FMCG", "Tech/SaaS", "Real Estate", "Retail"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Communication", "skills": ["Public Speaking", "Copywriting", "Consumer Behavior"]},
+      {"stage": "Intermediate", "title": "Digital Strategy", "skills": ["SEO/SEM", "Social Media Marketing", "CRM Software"]},
+      {"stage": "Advanced", "title": "Analytics", "skills": ["Google Analytics", "A/B Testing", "Conversion Optimization"]},
+      {"stage": "Job Ready", "title": "Leadership", "skills": ["Negotiation", "B2B Sales", "Campaign Management"]}
+    ]
+  },
+  "Core Engineering": {
+    "overview": "Core Engineers (Mechanical, Civil, Electrical, etc.) design and build physical structures, machines, and electronics.",
+    "eligibility": "Bachelor's degree in the specific engineering discipline (Mechanical, Civil, Electrical). P.E. license for advanced roles.",
+    "salary_range": "$70,000 - $140,000+",
+    "responsibilities": [
+      "Design systems, components, or processes to meet needs",
+      "Conduct tests and quality assurance on designs",
+      "Ensure compliance with safety and environmental regulations",
+      "Manage project timelines and budgets"
+    ],
+    "career_growth": "Junior Engineer → Project Engineer → Senior Engineer → Engineering Director",
+    "industries": ["Manufacturing", "Construction", "Automotive", "Aerospace"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Foundation Math & Physics", "skills": ["Calculus", "Physics", "Mechanics/Circuits"]},
+      {"stage": "Intermediate", "title": "Design Tools", "skills": ["AutoCAD", "SolidWorks", "MATLAB"]},
+      {"stage": "Advanced", "title": "Specialization", "skills": ["Finite Element Analysis", "Thermodynamics", "VLSI"]},
+      {"stage": "Job Ready", "title": "Project Execution", "skills": ["Project Management", "Safety Standards", "Quality Control"]}
+    ]
+  },
+  "Management & Operations": {
+    "overview": "Management and Operations leaders ensure organizations run smoothly. They optimize processes, manage supply chains, and lead teams to achieve strategic goals.",
+    "eligibility": "Bachelor's in Business Administration or related field. MBA or PMP certification is highly regarded.",
+    "salary_range": "$80,000 - $180,000+",
+    "responsibilities": [
+      "Oversee day-to-day operations and logistics",
+      "Implement strategies to improve productivity and efficiency",
+      "Manage budgets and forecast resource needs",
+      "Lead cross-functional teams and resolve conflicts"
+    ],
+    "career_growth": "Operations Coordinator → Operations Manager → Director of Operations → COO",
+    "industries": ["Logistics", "Manufacturing", "Corporate Enterprise", "Healthcare"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Business Fundamentals", "skills": ["Business Ethics", "Basic Accounting", "Communication"]},
+      {"stage": "Intermediate", "title": "Process Optimization", "skills": ["Lean Six Sigma", "Supply Chain Management", "Agile"]},
+      {"stage": "Advanced", "title": "Strategic Leadership", "skills": ["Strategic Planning", "Change Management", "Financial Forecasting"]},
+      {"stage": "Job Ready", "title": "Execution", "skills": ["PMP Frameworks", "Risk Management", "People Management"]}
+    ]
+  },
+  "Research & Science": {
+    "overview": "Researchers and Scientists push the boundaries of human knowledge in fields like biology, chemistry, and physics through rigorous experimentation.",
+    "eligibility": "Master's or Ph.D. in a specific scientific discipline is usually required for senior roles.",
+    "salary_range": "$65,000 - $140,000+",
+    "responsibilities": [
+      "Design and conduct controlled experiments",
+      "Analyze data and publish findings in peer-reviewed journals",
+      "Secure grant funding and manage laboratory resources",
+      "Ensure compliance with ethical and safety standards"
+    ],
+    "career_growth": "Research Assistant → Postdoctoral Researcher → Principal Investigator / Lead Scientist",
+    "industries": ["Academia", "Pharmaceuticals", "Biotech", "Government Labs"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Scientific Method", "skills": ["Laboratory Techniques", "Literature Review", "Basic Statistics"]},
+      {"stage": "Intermediate", "title": "Data Analysis", "skills": ["Experimental Design", "Data Modeling", "R/Python"]},
+      {"stage": "Advanced", "title": "Specialization", "skills": ["Bioinformatics", "Advanced Spectroscopy", "Genomics"]},
+      {"stage": "Job Ready", "title": "Publication & Grants", "skills": ["Academic Writing", "Grant Writing", "Peer Review"]}
+    ]
+  },
+  "Human Resources": {
+    "overview": "HR professionals attract, hire, train, and retain the workforce. They handle employee relations, benefits, and company culture.",
+    "eligibility": "Bachelor's degree in HR, Business, or Psychology. SHRM or HRCI certifications are beneficial.",
+    "salary_range": "$55,000 - $120,000+",
+    "responsibilities": [
+      "Recruit, interview, and onboard new employees",
+      "Administer compensation and benefits plans",
+      "Resolve workplace conflicts and ensure legal compliance",
+      "Develop training and development programs"
+    ],
+    "career_growth": "HR Assistant → HR Generalist → HR Manager → HR Director / CHRO",
+    "industries": ["Corporate", "Tech", "Healthcare", "Staffing Agencies"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "People Skills", "skills": ["Communication", "Empathy", "Basic Labor Laws"]},
+      {"stage": "Intermediate", "title": "Core Functions", "skills": ["Recruitment", "Onboarding", "Payroll Processing"]},
+      {"stage": "Advanced", "title": "Strategy & Compliance", "skills": ["Employment Law", "Compensation Strategy", "Conflict Resolution"]},
+      {"stage": "Job Ready", "title": "HR Tech", "skills": ["HRIS Systems", "Performance Management", "Talent Acquisition Software"]}
+    ]
+  },
+  "Content & Communication": {
+    "overview": "Content creators, writers, and PR specialists craft narratives to inform, persuade, or entertain audiences across various mediums.",
+    "eligibility": "Degree in Journalism, English, Communications, or a strong portfolio of published work.",
+    "salary_range": "$45,000 - $100,000+",
+    "responsibilities": [
+      "Write, edit, and proofread content for various platforms",
+      "Develop content strategies aligned with brand goals",
+      "Manage public relations and media outreach",
+      "Analyze audience engagement metrics"
+    ],
+    "career_growth": "Junior Writer → Content Strategist → Communications Manager → Head of Content/PR",
+    "industries": ["Media", "Publishing", "Marketing", "Corporate Communications"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Writing Fundamentals", "skills": ["Grammar", "Creative Writing", "Research Skills"]},
+      {"stage": "Intermediate", "title": "Digital Formats", "skills": ["SEO Writing", "Social Media Copy", "Journalism Basics"]},
+      {"stage": "Advanced", "title": "Strategy & PR", "skills": ["Content Strategy", "Crisis Communication", "Brand Voice"]},
+      {"stage": "Job Ready", "title": "Tools & Analytics", "skills": ["CMS platforms", "Analytics Tools", "Multimedia Editing"]}
+    ]
+  },
+  "Government / Civil Services": {
+    "overview": "Civil servants work in public administration, enforcing laws, managing public funds, and implementing government policies.",
+    "eligibility": "Bachelor's degree minimum. Must pass rigorous competitive examinations (e.g., UPSC, SSC).",
+    "salary_range": "Varies by grade and pay commission (stable, with extensive benefits).",
+    "responsibilities": [
+      "Implement and oversee public policies",
+      "Manage administrative districts or departments",
+      "Ensure law and order and public safety",
+      "Manage public budgets and infrastructure projects"
+    ],
+    "career_growth": "Entry Level Officer → Assistant Director / Magistrate → Joint Secretary → Secretary to Government",
+    "industries": ["Public Administration", "Defense", "Law Enforcement", "Revenue Service"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "General Knowledge", "skills": ["Current Affairs", "History", "Geography"]},
+      {"stage": "Intermediate", "title": "Aptitude & Reasoning", "skills": ["Quantitative Aptitude", "Logical Reasoning", "English Comprehension"]},
+      {"stage": "Advanced", "title": "Specialized Subjects", "skills": ["Public Administration", "Law", "Economics"]},
+      {"stage": "Job Ready", "title": "Interview Prep", "skills": ["Ethics", "Decision Making", "Interview Skills"]}
+    ]
+  },
+  "General Professional": {
+    "overview": "A versatile professional path encompassing roles that require strong organizational, communication, and problem-solving skills without deep technical specialization.",
+    "eligibility": "Any Bachelor's degree. Adaptability and soft skills are key.",
+    "salary_range": "$40,000 - $90,000+",
+    "responsibilities": [
+      "Coordinate administrative workflows",
+      "Communicate across departments to align goals",
+      "Manage schedules, documents, and client inquiries",
+      "Solve ad-hoc operational challenges"
+    ],
+    "career_growth": "Associate → Coordinator → Specialist → Department Manager",
+    "industries": ["Administration", "Customer Success", "Non-Profit", "Services"],
+    "learning_roadmap": [
+      {"stage": "Beginner", "title": "Soft Skills", "skills": ["Time Management", "Communication", "Teamwork"]},
+      {"stage": "Intermediate", "title": "Office Tech", "skills": ["Microsoft Office", "Google Workspace", "CRM Basics"]},
+      {"stage": "Advanced", "title": "Coordination", "skills": ["Project Coordination", "Client Relations", "Data Entry"]},
+      {"stage": "Job Ready", "title": "Efficiency", "skills": ["Workflow Automation", "Problem Solving", "Business Etiquette"]}
+    ]
+  }
+}

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your personalised career dashboard — see your top career matches, skill gaps, and learning roadmap."
+    />
+    <title>Dashboard | PathPilot AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body class="dash-body">
+    <!-- ── Sidebar ─────────────────────────────────────────────────── -->
+    <nav class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <a class="sidebar-brand" href="index.html" aria-label="PathPilot AI home">
+        <span class="sidebar-logo">
+          <svg viewBox="0 0 32 32">
+            <path d="M7 25C11 24 13 21 14 17c1-4 3-7 8-9" />
+            <path d="m18 7 5 1-1 5" />
+            <circle cx="7" cy="25" r="2" />
+          </svg>
+        </span>
+        <span>PathPilot <strong>AI</strong></span>
+      </a>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">Menu</p>
+        <a class="sidebar-link active" href="dashboard.html" id="nav-dashboard">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+          </svg>
+          Dashboard
+        </a>
+        <a class="sidebar-link" href="careers.html" id="nav-careers">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+          Explore Careers
+        </a>
+        <a class="sidebar-link" href="skill-gap.html" id="nav-gaps">
+          <svg viewBox="0 0 24 24">
+            <path d="M18 20V10" />
+            <path d="M12 20V4" />
+            <path d="M6 20v-6" />
+          </svg>
+          Skill Gap
+        </a>
+        <a class="sidebar-link" href="roadmap.html" id="nav-roadmap">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 12h18" />
+            <path d="M3 6h18" />
+            <path d="M3 18h18" />
+            <circle cx="9" cy="6" r="2" fill="currentColor" />
+            <circle cx="15" cy="12" r="2" fill="currentColor" />
+            <circle cx="9" cy="18" r="2" fill="currentColor" />
+          </svg>
+          My Roadmap
+        </a>
+        <a class="sidebar-link" href="exams.html" id="nav-exams">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 11l3 3L22 4" />
+            <path
+              d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+            />
+          </svg>
+          Exam Guide
+        </a>
+        <a class="sidebar-link" href="resume.html" id="nav-resume">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+            />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+          Resume Analyzer
+        </a>
+
+        <a class="sidebar-link" href="mentor.html" id="nav-mentor">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+            />
+          </svg>
+          AI Mentor
+        </a>
+        <a class="sidebar-link" href="profile.html" id="nav-profile">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+          </svg>
+          My Profile
+        </a>
+      </div>
+
+      <div class="sidebar-section sidebar-bottom">
+        <button class="sidebar-link" id="themeToggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"
+            />
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z" />
+          </svg>
+          Toggle theme
+        </button>
+        <button class="sidebar-link danger" id="logoutBtn">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          Sign out
+        </button>
+      </div>
+    </nav>
+
+    <!-- ── Main content ─────────────────────────────────────────────── -->
+    <div class="dash-content">
+      <!-- Top bar -->
+      <header class="dash-topbar">
+        <button
+          class="sidebar-toggle"
+          id="sidebarToggle"
+          aria-label="Toggle sidebar"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="dash-topbar-right">
+          <a
+            class="dash-user-chip"
+            id="userChip"
+            href="profile.html"
+            style="text-decoration: none; color: inherit"
+          >
+            <span class="user-avatar" id="userAvatar">?</span>
+            <span id="userGreeting">Loading…</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Page body -->
+      <main class="dash-main-content">
+        <!-- ── Hero greeting ──────────────────────────────────────── -->
+        <section class="dash-hero fade-in">
+          <div>
+            <p class="eyebrow"><span></span> Your personalised report</p>
+            <h1 id="heroTitle">Finding your best career matches…</h1>
+            <p class="dash-hero-sub" id="heroSub">
+              Based on your skills, interests, education and certifications.
+            </p>
+          </div>
+          <button class="button refresh-btn" id="refreshBtn">
+            <svg viewBox="0 0 24 24" width="16">
+              <path d="M23 4v6h-6" />
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+            </svg>
+            Refresh matches
+          </button>
+        </section>
+
+        <!-- ── Stats strip ────────────────────────────────────────── -->
+        <section class="stats-strip fade-in" id="statsStrip">
+          <div class="stat-card" id="statSkills">
+            <span class="stat-icon purple">✦</span>
+            <div>
+              <strong id="skillCount">—</strong>
+              <small>Skills on profile</small>
+            </div>
+          </div>
+          <div class="stat-card" id="statInterests">
+            <span class="stat-icon orange">◎</span>
+            <div>
+              <strong id="interestCount">—</strong>
+              <small>Interests listed</small>
+            </div>
+          </div>
+          <div class="stat-card" id="statCgpa">
+            <span class="stat-icon mint">↗</span>
+            <div>
+              <strong id="cgpaDisplay">—</strong>
+              <small>CGPA / Score</small>
+            </div>
+          </div>
+          <div class="stat-card" id="statCerts">
+            <span class="stat-icon blue">▦</span>
+            <div>
+              <strong id="certCount">—</strong>
+              <small>Certifications</small>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Career Matches panel ───────────────────────────────── -->
+        <section class="panel fade-in" id="careers-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow"><span></span> Powered by survey data</p>
+              <h2>Your career matches</h2>
+            </div>
+            <span class="panel-badge" id="matchBadge">Loading…</span>
+          </div>
+
+          <!-- Loading skeleton -->
+          <div class="card-grid" id="careerGrid">
+            <div class="career-card skeleton"></div>
+            <div class="career-card skeleton"></div>
+            <div class="career-card skeleton"></div>
+            <div class="career-card skeleton"></div>
+            <div class="career-card skeleton"></div>
+          </div>
+        </section>
+
+        <!-- ── Skill Gap panel ────────────────────────────────────── -->
+        <section class="panel fade-in" id="gaps-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow"><span></span> Close the distance</p>
+              <h2>Skill gap analysis</h2>
+            </div>
+          </div>
+
+          <div class="gap-layout">
+            <!-- Career selector -->
+            <div class="gap-selector">
+              <p class="gap-selector-label">Select a career to analyse</p>
+              <div id="careerSelectorList" class="career-selector-list">
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line"></div>
+              </div>
+            </div>
+
+            <!-- Gap detail -->
+            <div class="gap-detail" id="gapDetail">
+              <div class="gap-placeholder">
+                <span>↗</span>
+                <p>
+                  Select a career on the left to see your skill gap breakdown.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Empty / error state ────────────────────────────────── -->
+        <div class="error-banner" id="errorBanner" style="display: none">
+          <span>⚠</span>
+          <div>
+            <strong id="errorTitle">Something went wrong</strong>
+            <p id="errorMsg">Please try refreshing the page.</p>
+          </div>
+          <a class="button button-small" href="profile.html">Update profile</a>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
