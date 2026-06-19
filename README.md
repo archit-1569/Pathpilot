@@ -1,44 +1,55 @@
-# PathPilot AI - Phase 2
+# PathPilot AI - Career Recommendation & Mentorship Portal
 
-Phase 2 adds JWT authentication and student profile management to the Phase 1 foundation.
+PathPilot AI is a comprehensive career guidance and mentorship portal designed to help students discover career matches, identify skill gaps, build personalized learning roadmaps, prepare for government exams, and interact with an AI Mentor.
 
-## Run the frontend
+## Features & Implemented Phases
 
-From the project root, run:
+1. **Authentication & Profile Management**
+   - Secure registration and login using JWT-based token authentication.
+   - OTP email verification for secure account creation and password resets.
+   - Comprehensive student profile tracking skills, interests, CGPA, and professional certifications.
 
+2. **ML Career Recommendation Engine**
+   - Uses a TF-IDF vectorizer and cosine similarity on a 1,195-respondent survey dataset (`career_recommender.csv`) to map user profiles to 15 distinct career clusters.
+   - Applies bonus modifiers for high CGPA and matching professional certifications.
+
+3. **Personalized Roadmaps & Skill Gaps**
+   - Detailed, stage-by-stage learning roadmaps for all 15 careers (from Beginner to Job Ready).
+   - Case-insensitive, synonym-tolerant matching (e.g., `ReactJS` matches `React`, `tailwind` matches `Tailwind CSS`).
+   - Dynamic progress tracking (e.g., "3 of 12 skills acquired").
+
+4. **Exam Preparation Guide**
+   - Curated database of prominent competitive government exams.
+   - Direct matching between target careers and corresponding recommended exams.
+
+5. **AI Resume Analyzer**
+   - Upload or paste resume text to receive feedback, match scores, and gap identification against target career clusters.
+
+6. **AI Mentor Chat**
+   - Direct, context-aware chatbot interface powered by Gemini to answer career, learning, and skill-building queries.
+
+7. **Admin Control Panel**
+   - Independent Next.js / Tailwind dashboard for administrators to audit users, manage careers/exams, view telemetry analytics, and control system configuration settings.
+
+---
+
+## How to Run PathPilot AI
+
+### Run Both Frontend & Backend (Recommended)
+From the project root directory, run:
 ```bat
-.\start.cmd
+python run_pathpilot.py
 ```
+This script automatically starts:
+- **Student Frontend**: [http://localhost:8000](http://localhost:8000)
+- **FastAPI Backend API**: [http://localhost:8001](http://localhost:8001)
+- **API Documentation**: [http://localhost:8001/docs](http://localhost:8001/docs)
 
-This launches both services in the same terminal:
+---
 
-- Frontend: `http://localhost:8000`
-- Backend API: `http://localhost:8001`
-- API documentation: `http://localhost:8001/docs`
+## Technical Stack
 
-You can also open `index.html` directly. Do not try to run `styles.css`; CSS files are loaded by the HTML page and cannot run by themselves.
-
-`start.cmd` works even when PowerShell script execution is disabled. Keep its terminal open while using the website. Press `Ctrl+C` once to stop both services.
-
-## Current scope
-
-- Responsive landing page and dashboard preview
-- Separate HTML, CSS, and JavaScript files
-- Dark mode, mobile navigation, global search, and reveal animations
-- PostgreSQL schema and FastAPI backend
-- JWT registration, login, and current-user authentication
-- Development password-reset flow
-- Student profile viewing, editing, and account deletion
-- Connected registration, login, password reset, and profile pages
-
-Later phases will implement recommendation APIs, career explorer, skill gap analysis, roadmaps, exams, AI mentor, resume analyzer, and admin tools.
-
-## Run only the backend
-
-Ensure PostgreSQL is running and `backend/.env` contains a valid `DATABASE_URL`, then run:
-
-```bat
-.\backend\start.cmd
-```
-
-API documentation is available at `http://localhost:8001/docs`. Database status is available at `http://localhost:8001/api/v1/health`.
+- **Frontend**: Static HTML5, Vanilla CSS, and JavaScript.
+- **Backend**: FastAPI, SQLAlchemy ORM, PostgreSQL database.
+- **ML / AI**: Scikit-learn (TF-IDF, Cosine Similarity), Pandas, NumPy, and Google Gemini API.
+- **Admin App**: Next.js, Tailwind CSS, TypeScript, and shadcn/ui.
